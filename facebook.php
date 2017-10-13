@@ -88,9 +88,17 @@ class FacebookPlugin extends Plugin {
             . '/?fields=feed{permalink_url,created_time,link,attachments,message}&access_token='
             . $config->get('facebook_common_settings.application_id') . '|'
             . $config->get('facebook_common_settings.application_secret');
-        $results = Response::get($url);
-
-        $this->parsePostResponse($results, $config, $filter_by_tags);
+            
+            
+        // http://stackoverflow.com/questions/17438847/using-facebook-graph-api-how-to-get-news-feed-with-large-picture-size-if-the-fee
+        $results = "";
+        try {
+            $results = Response::get($url);
+            $this->parsePostResponse($results, $config, $filter_by_tags);
+        } catch (\Exception $e) {
+            echo 'Exception abgefangen: ',  $e->getMessage(), "\n";
+            //echo "Keine Posts gefunden!\n";
+        }
 
         $this->template_post_vars =
             ['pageLink' => 'https://www.facebook.com/'
@@ -211,7 +219,7 @@ class FacebookPlugin extends Plugin {
                 $r[$count]['time'] = $formatted_date;
                 $r[$count]['image'] = $image_html;
                 $r[$count]['imageSrc'] = $imageSrc;
-                $r[$count]['message'] = nl2br($val->message);
+                $r[$count]['message'] = preg_split("/[\n]+/", $val->message);//nl2br($val->message);
                 $r[$count]['link'] = $val->permalink_url;
                 $this->addFeed($r);
                 
