@@ -1,14 +1,14 @@
 name: Facebook
-version: 1.6.2
+version: 99.99
 description: "**Facebook** is a plugin that embeds Facebook page content, album or events into your Grav website."
 icon: facebook
 author:
-  name: Mika Hänninen
-  email: mika.hanninen@gmail.com
-homepage: https://github.com/mikahanninen/grav-plugin-facebook
+  name: Max Roth
+  email: 2014@ailoone.com
+homepage: https://github.com/macmacs/grav-plugin-facebook
 keywords: facebook
-bugs: https://github.com/mikahanninen/grav-plugin-facebook/issues
-docs: https://github.com/mikahanninen/grav-plugin-facebook/blob/master/README.md
+bugs: https://github.com/macmacs/grav-plugin-facebook/issues
+docs: https://github.com/macmacs/grav-plugin-facebook/blob/master/README.md
 license: MIT
 
 form:
