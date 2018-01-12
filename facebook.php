@@ -109,7 +109,8 @@ class FacebookPlugin extends Plugin {
                     . $config->get('facebook_page_settings.section_title') . '</h3></a>',
                 'feed' => $this->feeds,
                 'count' => empty($config->get('facebook_page_settings.count')) ? 7
-                    : $config->get('facebook_page_settings.count')];
+                    : $config->get('facebook_page_settings.count'),
+                'heading' => $config->get('facebook_page_settings.first_paragraph_is_heading'),];
 
         $output =
             $this->grav['twig']->twig()

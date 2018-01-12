@@ -95,6 +95,17 @@ form:
       default: ''
       validate:
         type: string
+        
+    facebook_page_settings.first_paragraph_is_heading:    
+      type: toggle
+      label: Format irst post paragraph as heading
+      highlight: 1
+      default: 1
+      options:
+        1: Enabled
+        0: Disabled
+      validate:
+        type: bool
 
     EventSettings:
       type: section
