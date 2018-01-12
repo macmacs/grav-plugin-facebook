@@ -98,7 +98,7 @@ form:
         
     facebook_page_settings.first_paragraph_is_heading:    
       type: toggle
-      label: Format irst post paragraph as heading
+      label: Format first post paragraph as heading
       highlight: 1
       default: 1
       options:
