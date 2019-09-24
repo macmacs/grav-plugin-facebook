@@ -1,3 +1,23 @@
+# v1.7.1
+## 3/31/2019
+
+1. [](#improved)
+  * Use Facebook API v3.2 to get posts
+
+2. [](#improved)
+  * Get Access Token with Application ID and secret
+
+# v1.7.0
+## 10/29/2017
+
+1. [](#improved)
+  * Add more checks into Events place.
+  https://github.com/mikahanninen/grav-plugin-facebook/issues/36
+
+2. [](#improved)
+  * Translated day and month names in the Events
+  https://github.com/mikahanninen/grav-plugin-facebook/issues/37
+
 # v1.6.2
 ## 09/16/2017
 
@@ -24,7 +44,7 @@
 
 1. [](#improved)
   * Remove jQuery 1.11 from plugin assets
-  
+
 # v1.4.2
 ## 03/12/2017
 

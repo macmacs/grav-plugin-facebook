@@ -95,8 +95,8 @@ form:
       default: ''
       validate:
         type: string
-        
-    facebook_page_settings.first_paragraph_is_heading:    
+
+    facebook_page_settings.first_paragraph_is_heading:
       type: toggle
       label: Format first post paragraph as heading
       highlight: 1
@@ -189,7 +189,7 @@ form:
       default: ''
       validate:
         type: string
-        
+
     facebook_album_settings.album_name:
       type: text
       size: large
